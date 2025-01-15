@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Win32;
+using Svg;
 using System.Drawing;
 using System.Drawing.Imaging;
-using Svg;
-using Microsoft.Win32;
 
 namespace jl_SVG_2_PNG_
 {
@@ -26,10 +21,6 @@ namespace jl_SVG_2_PNG_
             // Load the SVG text to a SVG document
             SvgDocument svgDocument = SvgDocument.FromSvg<SvgDocument>(strSVG);
 
-            // Define the output size
-            //int width = 800;
-            //int height = 600;
-
             // Get the output size from the SVG document
             int width = (int)svgDocument.Width.Value;
             int height = (int)svgDocument.Height.Value;
@@ -45,7 +36,6 @@ namespace jl_SVG_2_PNG_
             saveFileDialog.Filter = "PNG files|*.png";
             saveFileDialog.Title = "Save the PNG file";
             saveFileDialog.ShowDialog();
-
 
             // Save the bitmap as a PNG file
             string pngFilePath = saveFileDialog.FileName;
