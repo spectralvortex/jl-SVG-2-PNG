@@ -1,0 +1,54 @@
+﻿<Window x:Class="jl_SVG_2_PNG_.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:jl_SVG_2_PNG_"
+        mc:Ignorable="d"
+        Title="Convert SVG to PNG image - v1.0" Height="248" Width="620"
+        Background="#333333"
+        Icon="pack://application:,,,/Images/app_icon.ico"
+        >
+
+    <Window.Resources>
+        <Style x:Key="NoFocusTextBox" TargetType="TextBox">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        </Style>
+    </Window.Resources>
+    <Grid Margin="0,0,0,0">
+        <Image x:Name="image" HorizontalAlignment="Left" Height="54" Width="53" Margin="14,150,0,0" VerticalAlignment="Top"
+               Source="/Images/app_image53x54.png" Stretch="Uniform"/>
+        <Image  />
+        <TextBox x:Name="txtSVG"
+                 Width="580" Height="140"
+                 VerticalAlignment="Top"
+                 HorizontalAlignment="Stretch"
+                 Style="{StaticResource NoFocusTextBox}"
+                 TextWrapping="Wrap" 
+                 AcceptsReturn="True"
+                 Margin="0,8,0,5"
+                 VerticalScrollBarVisibility="Auto"
+                 HorizontalScrollBarVisibility="Auto"
+                 GotFocus="txtSVG_GotFocus"
+                 BorderBrush="Black"
+                 Background="#cbcbcb"
+                 AllowDrop="True"
+                 PreviewDragOver="txtSVG_PreviewDragOverOrEnter"
+                 PreviewDragEnter="txtSVG_PreviewDragOverOrEnter"
+                 PreviewDrop="txtSVG_HandleDrop"
+                 Drop="txtSVG_HandleDrop"
+             />
+        <Button x:Name="btnConvert" 
+                Content="Convert to PNG" 
+                HorizontalAlignment="Right" 
+                Margin="14,162,14,0"
+                Padding="6,6,6,6"
+                VerticalAlignment="Top"
+                Click="btnConvert_Click"
+                Background="#ff972f"
+                BorderBrush="#653b12"
+                />
+        
+
+    </Grid>
+</Window>

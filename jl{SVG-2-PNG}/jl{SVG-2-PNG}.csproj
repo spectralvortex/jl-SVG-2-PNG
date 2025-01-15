@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows10.0.17763.0</TargetFramework>
+    <RootNamespace>jl_SVG_2_PNG_</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <StartupObject>jl_SVG_2_PNG_.App</StartupObject>
+    <ApplicationIcon>Images\app_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\app_icon.ico" />
+    <None Remove="Images\app_image53x54.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\app_image53x54.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Svg" Version="3.4.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\app_icon.ico" />
+  </ItemGroup>
+
+</Project>
